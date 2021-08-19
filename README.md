@@ -1,130 +1,96 @@
-# Hugo Winston Theme
+# Yuanland - Metaverse site
 
-Hugo Winston is a bold minimal blogging theme.
+## Jekyll Serif Theme
 
-[Live Demo](https://hugo-winston.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io/)
+Serif is a modern business theme for Jekyll. It contains multiple content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
 
-![Hugo Winston Theme screenshot](https://www.zerostatic.io/theme/hugo-winston/hugo-winston-screenshot.png)
+[Live Demo](https://jekyll-serif.netlify.app/) | 
+[Zerostatic Themes](https://www.zerostatic.io)
 
-## Theme features
+![Jekyll Serif Theme screenshot](https://www.zerostatic.io/theme/jekyll-serif/jekyll-serif-screenshot.png)
 
-- Posts (Markdown)
-- Basic Page (Markdown)
-- SCSS (Hugo Pipelines)
+### Theme features
+
+- Jekyll 4.1
+- Services (Collection)
+- Team (Collection)
+- Features (Data)
+- SCSS
 - Responsive design
+- Bootstrap 4.3 grid and media queries only
+- Responsive menu
 - 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse SEO score
+- 100/100 Google Lighthouse seo score
 - 100/100 Google Lighthouse accessibility score
-- Google analytics configured in `config.toml`
-- Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
-- Title, meta description and meta tags automatically generated for every page
-- OG Meta data for Facebook and Twitter
-- Semantic HTML document structure
+- 100/100 Google Lighthouse best practices score
+- Under 50KB without images or 80KB with images and illustrations ⚡
+- Under 20KB without Google fonts ⚡⚡⚡
+- Robust example content included
+- Royalty free illustrations included
+- Netlify & Github Pages ready
 
-# Installation
-### Install Hugo
+## Installation
 
-To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
+### Installing Ruby & Jekyll
+ 
+If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
 
-### Check Hugo version (Hugo 0.51+ Extended is required)
+### Installing Theme
 
-This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets. Please make sure you have the **Hugo Extended** version installed. If you are not using the extended version this theme will not not compile.
+Download or clone the theme.
 
-To check your version of Hugo, run:
-
-```
-hugo version
-```
-
-This will output the currently installed version of Hugo. Make sure you see `/extended` after the version number, for example `Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown` You do not need to use version v0.51 specifically, you can use any version of Hugo above 0.51. It just needs to have the `/extended` part
-
-### Create a new Hugo site
+To run the theme locally, navigate to the theme directory and run:
 
 ```
-hugo new site mynewsite
-```
+bundle install
+``` 
 
-This will create a fresh Hugo site in the folder `mynewsite`.
-
-### Install theme with Git
-
-Clone this repo into the themes folder
-```
-cd mynewsite
-git clone https://github.com/zerostaticthemes/hugo-winston-theme.git themes/hugo-winston-theme
-```
-
-### Copy example content
-
-Copy the entire contents of the `mynewsite/themes/hugo-winston-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`
-
-To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
+To start the Jekyll local development server.
 
 ```
-cp -a themes/hugo-winston-theme/exampleSite/. .
+bundle exec jekyll serve
+``` 
+
+To build the theme.
+ 
+```
+bundle exec jekyll build
 ```
 
-### Update config.toml
+## Deployment
 
-After you copy the `config.toml` into the root folder of your Hugo site you will need to update the `baseURL`, `themesDir` and `theme` values in `mynewsite/config.toml`
+### Stackbit
 
-```
-baseURL = "/"
-themesDir = "themes"
-theme = "hugo-winston-theme"
-```
+Use Stackbit to deploy this theme. This theme contains a valid and tested `stackbit.yaml`
 
-### Run Hugo
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/zerostaticthemes/jekyll-serif-theme)
 
-After installing the theme for the first time, generate the Hugo site.
+### Netlify
 
-You run this command from the root folder of your Hugo site ie `mynewsite/`
+Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
 
-```
-hugo
-```
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
 
-For local development run Hugo's built-in local server.
+### Github Pages
+This theme has been tested to work with Github Pages (and Github Project Pages). When using Github Pages you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
 
-```
-hugo server
-```
+For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme/"`
 
-Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+## License & Credits
 
-# Configuration
+### Credits
 
-### Config options
+- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
+- Stock images by Unsplash - https://unsplash.com/
+- Feature icons by Noun Project - https://thenounproject.com/
 
-```
-// config.toml
-[params]
-  google_analytics_id = ""
-  twitter_handle = "@zerostaticio"
-  showAuthorOnHomepage = true
-  showAuthorOnPosts = false
-  showPostsOnHomepage = false
-  addFrame = true
-  addDot = true
-```
+### License
 
-### Google Analytics
+This theme is open source under the MIT license. Please be respectful 🙏🏽 Leave me as an original author in the LICENSE file if you fork or copy this theme. 
 
-Add you google analytics ID to the `config.toml`
+> Do not create ports of this theme. Do You can't re-distribute or re-sell this theme as a theme, stock, in a tool or as a template.
 
-```
-// config.toml
-[params]
-  google_analytics_id="UA-132398315-1"
-```
+### Other Versions
 
-# Deploying to Netlify
-
-This theme includes a `netlify.toml` which is configured to deploy to Netlify from the `exampleSite` folder. See this discussion on how to deploy your site on Netlify from the `exampleSite` folder - https://discourse.gohugo.io/t/deploy-your-theme-to-netlify/15508
-
-Most likely if you are deploying to Netlify and created a new Hugo site or added this theme to an existing Hugo site then you are not deploying from the `exampleSite` directory and you can delete the `netlify.toml` file.
-
-## License
-
-If you fork or copy this theme the LICENSE file and the copyright notice on line 3 (where I am listed as the author) must not be changed. You cannot just replace the copyright line with your own name. Attribution in your README.md or on your site is also welcome but not required.
+- [Hugo Serif Theme](https://github.com/zerostaticthemes/hugo-serif-theme) (official)
+- [Gatsby Serif Theme](https://github.com/zerostaticthemes/gatsby-serif-theme) (official)
