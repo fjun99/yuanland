@@ -91,10 +91,10 @@ body {
   -webkit-text-fill-color: transparent;
   font-size:150px;
 
-  animation: shine 3s linear infinite;
+  animation: shine 8s linear infinite;
   @keyframes shine {
   to {
-    background-position: 300% center;
+    background-position: 400% center;
     }
   }
 
